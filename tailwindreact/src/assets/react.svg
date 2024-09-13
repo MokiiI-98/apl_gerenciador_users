@@ -1,0 +1,100 @@
+<div className="p-32 basis-4">
+    <!-- Esse `div` cria um container com padding (espaçamento interno) de 32 unidades e define a flex-basis em 4 (em relação ao comportamento do flexbox). -->
+    
+    <form className="max-w-md mx-auto ">
+        <!-- Inicia o formulário com classes Tailwind CSS. O formulário é centralizado horizontalmente (`mx-auto`) e a largura máxima (`max-w-md`) é definida para médio (aproximadamente 28rem ou 448px). -->
+        
+        <div className="relative z-0 w-full mb-5 group">
+            <!-- Um contêiner para o campo de email. A classe `relative` indica que os elementos filhos posicionados dentro desse `div` terão posições relativas a ele. A propriedade `z-0` controla a ordem de empilhamento, `w-full` define a largura como 100%, `mb-5` adiciona uma margem inferior, e `group` agrupa vários estados visuais para serem aplicados dentro deste `div`. -->
+            
+            <input type="email" name="floating_email" id="floating_email" 
+                className="block py-2.5 px-0 w-full text-4xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-blue-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                placeholder="Email " required />
+            <!-- Este é o campo de entrada para o email. O `type="email"` garante que o navegador valide a entrada como um email. O `className` define estilos como `block` (exibido como bloco), `py-2.5` (padding vertical de 2.5), `text-4xl` define o tamanho do texto como muito grande, e `peer` permite que elementos associados (como o `label`) respondam a este input. O campo é obrigatório (`required`). -->
+
+            <label htmlFor="floating_email" 
+                className="peer-focus:font-medium absolute text-3xl text-black dark:text-black-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
+            <!-- O label flutuante que se ajusta dinamicamente baseado no estado do input. A classe `peer-focus` aplica estilos quando o campo input correspondente (o `peer`) está em foco. A animação reposiciona o label ao digitar no campo. -->
+        </div>
+        
+        <div className="relative z-0 w-full mb-5 group">
+            <input type="password" name="floating_password" id="floating_password" 
+                className="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 appearance-none dark:text-white dark:border-blue-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                placeholder="Senha " required />
+            <!-- Campo para a senha. Muito semelhante ao input de email acima, mas o `type="password"` oculta o texto digitado para segurança. -->
+            
+            <label htmlFor="floating_password" 
+                className="peer-focus:font-medium absolute text-sm text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
+            <!-- O label correspondente ao campo de senha, que também flutua conforme o usuário começa a digitar. -->
+        </div>
+        
+        <div className="relative z-0 w-full mb-5 group">
+            <input type="password" name="repeat_password" id="floating_repeat_password" 
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-blue-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                placeholder="Confirmar senha " required />
+            <!-- Campo para confirmar a senha. A lógica é a mesma dos campos anteriores. -->
+            
+            <label htmlFor="floating_repeat_password" 
+                className="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
+            <!-- O label flutuante para o campo de confirmação de senha. -->
+        </div>
+        
+        <div className="grid md:grid-cols-2 md:gap-6">
+            <!-- Um contêiner em formato de grid que divide o espaço em duas colunas (para tamanhos de tela médios e superiores) com um gap de 6 unidades entre as colunas. -->
+            
+            <div className="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_first_name" id="floating_first_name" 
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-blue-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                    placeholder="Primeiro Nome " required />
+                <!-- Campo para o primeiro nome do usuário. Usa as mesmas classes e lógica dos campos anteriores. -->
+                
+                <label htmlFor="floating_first_name" 
+                    className="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
+                <!-- O label para o campo de primeiro nome, com as mesmas animações de foco. -->
+            </div>
+            
+            <div className="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_last_name" id="floating_last_name" 
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-blue-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                    placeholder="Sobrenome " required />
+                <!-- Campo para o sobrenome do usuário, semelhante ao campo de primeiro nome. -->
+                
+                <label htmlFor="floating_last_name" 
+                    className="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
+                <!-- Label correspondente ao campo de sobrenome. -->
+            </div>
+        </div>
+        
+        <div className="grid md:grid-cols-2 md:gap-6">
+            <!-- Outro grid para dividir em duas colunas. Usado aqui para telefone e faculdade. -->
+            
+            <div className="relative z-0 w-full mb-5 group">
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" 
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-blue-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                    placeholder="Numero de telefone" required />
+                <!-- Campo para o número de telefone, com um padrão de validação `pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"` para aceitar números no formato "123-456-7890". -->
+                
+                <label htmlFor="floating_phone" 
+                    className="peer-focus:font-medium absolute text-sm text-black dark:text--400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
+                <!-- Label para o campo de telefone. -->
+            </div>
+            
+            <div className="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_company" id="floating_company" 
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-blue-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
+                    placeholder="Digite sua faculdade " required />
+                <!-- Campo para inserir o nome da faculdade (ou empresa, como originalmente definido no seu código). -->
+                
+                <label htmlFor="floating_company" 
+                    className="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
+                <!-- Label para o campo de faculdade. -->
+            </div>
+        </div>
+        
+        <button type="submit" 
+            className="text-green-700 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Submit
+        </button>
+        <!-- Botão de envio do formulário. Aplica cores para o texto (`text-green-700`) e fundo (`bg-blue-700`) com classes de Tailwind. Inclui animações como `hover:bg-blue-800` para alterar a cor ao passar o mouse. -->
+    </form>
+</div>

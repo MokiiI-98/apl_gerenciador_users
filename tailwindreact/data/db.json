@@ -1,0 +1,20 @@
+{
+  "Clientes": [
+    {
+      "id": "a074",
+      "nome": "teste",
+      "email": "mokiwara28@gmail.com",
+      "telefone": "67996373637",
+      "cidade": "Coxim",
+      "cargo": "Junior"
+    },
+    {
+      "id": "b2b4",
+      "nome": "sdaas",
+      "email": "luan.barboza2808@gmail.com",
+      "telefone": "67996373637",
+      "cidade": "Coxim",
+      "cargo": "Junior"
+    }
+  ]
+}
